@@ -1,0 +1,28 @@
+PODS:
+  - DropDown (2.3.13)
+  - lottie-ios (4.5.1)
+  - SwiftyJSON (5.0.2)
+  - Toast-Swift (5.1.1)
+
+DEPENDENCIES:
+  - DropDown
+  - lottie-ios
+  - SwiftyJSON
+  - Toast-Swift
+
+SPEC REPOS:
+  trunk:
+    - DropDown
+    - lottie-ios
+    - SwiftyJSON
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  lottie-ios: 248b380fa1b97d18e792c37d90da7ab2aa0d6562
+  SwiftyJSON: f5b1bf1cd8dd53cd25887ac0eabcfd92301c6a5a
+  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
+
+PODFILE CHECKSUM: 2c68cacdd8ec2ed34af579722264abfcac93d073
+
+COCOAPODS: 1.16.2

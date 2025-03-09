@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TaskCategory" representedClassName="TaskCategory" syncable="YES">
+        <attribute name="task_image" optional="YES" attributeType="String"/>
+        <attribute name="taskcategory_name" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TaskList" representedClassName="TaskList" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="taskcategory" optional="YES" attributeType="String"/>
+        <attribute name="taskdescription" optional="YES" attributeType="String"/>
+        <attribute name="taskduedate" optional="YES" attributeType="String"/>
+        <attribute name="tasklocation" optional="YES" attributeType="String"/>
+        <attribute name="taskpriority" optional="YES" attributeType="String"/>
+        <attribute name="tasktitle" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="TaskStatusList" representedClassName="TaskStatusList" syncable="YES">
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="taskduedate" optional="YES" attributeType="String"/>
+        <attribute name="tasklocation" optional="YES" attributeType="String"/>
+        <attribute name="taskstatus" optional="YES" attributeType="String"/>
+        <attribute name="tasktitle" optional="YES" attributeType="String"/>
+    </entity>
 </model>

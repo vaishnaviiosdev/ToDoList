@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KLR-jO-mrh">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checked" translatesAutoresizingMaskIntoConstraints="NO" id="hJn-66-d4R">
+                                        <rect key="frame" x="146.66666666666663" y="329.66666666666669" width="100.00000000000003" height="100"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="6xd-Gm-nFu"/>
+                                            <constraint firstAttribute="width" constant="100" id="HZ6-Iz-9RR"/>
+                                            <constraint firstAttribute="width" secondItem="hJn-66-d4R" secondAttribute="height" multiplier="1:1" id="t4C-LD-dRQ"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="6xd-Gm-nFu"/>
+                                                <exclude reference="HZ6-Iz-9RR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="HZ6-Iz-9RR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="6xd-Gm-nFu"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="App_Primary"/>
+                                <constraints>
+                                    <constraint firstItem="hJn-66-d4R" firstAttribute="centerX" secondItem="KLR-jO-mrh" secondAttribute="centerX" id="mAE-Du-JhT"/>
+                                    <constraint firstItem="hJn-66-d4R" firstAttribute="centerY" secondItem="KLR-jO-mrh" secondAttribute="centerY" id="peJ-0V-pcT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="App_Primary"/>
+                        <constraints>
+                            <constraint firstItem="KLR-jO-mrh" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TvT-ro-q8k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="KLR-jO-mrh" secondAttribute="top" id="XMZ-0G-DCl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="leading" secondItem="KLR-jO-mrh" secondAttribute="leading" id="gmD-Ay-HQJ"/>
+                            <constraint firstItem="KLR-jO-mrh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="whl-PK-PBa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checked" width="512" height="512"/>
+        <namedColor name="App_Primary">
+            <color red="0.15686274509803921" green="0.18823529411764706" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
