@@ -670,6 +670,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SuW-L1-JXb"/>
                     <connections>
+                        <outlet property="listLbl" destination="mdO-jH-t8v" id="Aco-i4-wgp"/>
                         <outlet property="noDataView" destination="tuS-aW-wah" id="W3z-V5-VKR"/>
                         <outlet property="plusView" destination="Pwp-1L-vV7" id="63j-lg-Df7"/>
                         <outlet property="searchTextfield" destination="p8y-SQ-jcq" id="2OH-fa-X70"/>

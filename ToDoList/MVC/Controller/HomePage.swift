@@ -22,6 +22,7 @@ class HomePage: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var topView: GradientView!
     @IBOutlet weak var searchTextfield: UITextField!
     @IBOutlet weak var noDataView: UIView!
+    @IBOutlet weak var listLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,7 @@ class HomePage: UIViewController, UITextFieldDelegate {
             if granted {
                 DispatchQueue.main.async {
                     self.fetchTaskStatusList()
+                    print("Notification permission granted")
                 }
             }
             else {
@@ -59,22 +61,35 @@ class HomePage: UIViewController, UITextFieldDelegate {
     
     func filterItems(with searchText: String) {
         if searchText.isEmpty {
+            // If search text is empty, reset to the full task list
             filteredData = taskList
+        } else {
+            // Filter task list based on title matching search text
+            filteredData = taskList.filter { task in
+                guard let title = task.tasktitle else { return false }
+                return title.lowercased().contains(searchText.lowercased())
+            }
+        }
+        
+        if filteredData.isEmpty {
+            self.noDataView.isHidden = false
+            self.taskListTableview.isHidden = true
         }
         else {
-             filteredData = taskList.filter { task in
-                 if let title = task.tasktitle {
-                     return title.lowercased().contains(searchText.lowercased())
-                 }
-                 return false
-             }
-         }
+            self.noDataView.isHidden = true
+            self.taskListTableview.isHidden = false
+        }
+        
+        // Debugging the count of filtered tasks
         print("The filtered data count is \(filteredData.count)")
         self.taskListTableview.reloadData()
     }
+
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         filteredData = taskList
+        self.noDataView.isHidden = true
+        self.taskListTableview.isHidden = false
         self.taskListTableview.reloadData()
         return true
     }
@@ -205,10 +220,12 @@ class HomePage: UIViewController, UITextFieldDelegate {
                 self?.plusView.isHidden = false
               
                 self?.selectedCategory = nil
+                self?.listLbl.text = "All List"
                 self?.filteredData = self?.taskList ?? []
             }
             else {
                 self?.selectedCategory = item
+                self?.listLbl.text = item
                 self?.filterTasksByCategory()
             }
             self?.taskListTableview.reloadData()
@@ -227,6 +244,8 @@ class HomePage: UIViewController, UITextFieldDelegate {
         self.searchTextfield.text = ""
         self.topView.isHidden = false
         self.searchView.isHidden = true
+        self.noDataView.isHidden = true
+        self.taskListTableview.isHidden = false
         filteredData = taskList
         self.taskListTableview.reloadData()
     }
