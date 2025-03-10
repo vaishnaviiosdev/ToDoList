@@ -27,14 +27,14 @@ class HomePage: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         locationManager.delegate = self
         self.searchTextfield.delegate = self
-        self.askNotificationPermission()
-        self.checkLocationAuthorizationStatus()
         COREDATA_MANAGER.fetchTaskCategories()
         setRoundCorner(iphone: 25, ipad: 40, customView: self.plusView)
    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.fetchTaskList()
+        self.askNotificationPermission()
+        self.checkLocationAuthorizationStatus()
     }
     
     func askNotificationPermission() {
@@ -83,6 +83,7 @@ class HomePage: UIViewController, UITextFieldDelegate {
         let fetchRequest: NSFetchRequest<TaskStatusList> = TaskStatusList.fetchRequest()
         do {
             self.allStatusList = try DB_Context.fetch(fetchRequest)
+            print("The allstatuslist is \(self.allStatusList)")
             self.scheduleNotificationsForTasks()
         }
         catch {
@@ -100,10 +101,10 @@ class HomePage: UIViewController, UITextFieldDelegate {
                 continue
             }
             
-            if dueDate > currentDate && task.taskstatus != "Completed" {
+            if dueDate > currentDate || task.taskstatus == "Pending" {
                 scheduleUpcomingNotificationForTask(task: task, dueDate: dueDate)
             }
-            else if dueDate < currentDate && task.taskstatus != "Completed" {
+            else if dueDate < currentDate || task.taskstatus == "Overdue" {
                 scheduleOverdueNotificationForTask(task: task, dueDate: dueDate)
             }
         }
@@ -112,7 +113,7 @@ class HomePage: UIViewController, UITextFieldDelegate {
     func scheduleUpcomingNotificationForTask(task: TaskStatusList, dueDate: Date) {
         let content = UNMutableNotificationContent()
         content.title = "Upcoming Task"
-    content.body = "Task '\(task.tasktitle ?? "")' is due at '\(task.taskduedate ?? "")'"
+        content.body = "Task '\(task.tasktitle ?? "")' is due at '\(task.taskduedate ?? "")'"
         content.sound = UNNotificationSound.default
         
         let triggerDate = dueDate.addingTimeInterval(-10 * 60)  // 10 minutes before the due date

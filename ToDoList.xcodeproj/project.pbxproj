@@ -22,7 +22,6 @@
 		271C348B2D7B68E500B1DDE3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C348A2D7B68E500B1DDE3 /* Constant.swift */; };
 		271C348D2D7B691500B1DDE3 /* MaterialCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C348C2D7B691500B1DDE3 /* MaterialCard.swift */; };
 		271C348F2D7B693B00B1DDE3 /* IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C348E2D7B693B00B1DDE3 /* IBDesignable.swift */; };
-		271C34912D7B695D00B1DDE3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C34902D7B695D00B1DDE3 /* Model.swift */; };
 		271C34932D7B696C00B1DDE3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C34922D7B696C00B1DDE3 /* CoreDataManager.swift */; };
 		271C34972D7B69F400B1DDE3 /* TaskCategoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271C34962D7B69F400B1DDE3 /* TaskCategoryPage.swift */; };
 		27C95E702D7C2AA40023A456 /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C95E6F2D7C2AA40023A456 /* NSObject.swift */; };
@@ -50,7 +49,6 @@
 		271C348A2D7B68E500B1DDE3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		271C348C2D7B691500B1DDE3 /* MaterialCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCard.swift; sourceTree = "<group>"; };
 		271C348E2D7B693B00B1DDE3 /* IBDesignable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignable.swift; sourceTree = "<group>"; };
-		271C34902D7B695D00B1DDE3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		271C34922D7B696C00B1DDE3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		271C34962D7B69F400B1DDE3 /* TaskCategoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryPage.swift; sourceTree = "<group>"; };
 		27C95E6F2D7C2AA40023A456 /* NSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 				27F2FE692D7E3E7700D0D338 /* Designable */,
 				27F2FE682D7E3E6A00D0D338 /* Constant */,
 				27C95E752D7C73920023A456 /* ToDoList.entitlements */,
-				271C347D2D7B63F300B1DDE3 /* CoreDataClasses */,
 				271C34662D7B567B00B1DDE3 /* AppDelegate.swift */,
 				271C34682D7B567B00B1DDE3 /* SceneDelegate.swift */,
 				271C34722D7B567C00B1DDE3 /* Assets.xcassets */,
@@ -124,7 +121,7 @@
 		27F2FE652D7E3E0E00D0D338 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				271C34902D7B695D00B1DDE3 /* Model.swift */,
+				271C347D2D7B63F300B1DDE3 /* CoreDataClasses */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 				271C34852D7B64E000B1DDE3 /* TaskList+CoreDataProperties.swift in Sources */,
 				271C348F2D7B693B00B1DDE3 /* IBDesignable.swift in Sources */,
 				271C34672D7B567B00B1DDE3 /* AppDelegate.swift in Sources */,
-				271C34912D7B695D00B1DDE3 /* Model.swift in Sources */,
 				271C34972D7B69F400B1DDE3 /* TaskCategoryPage.swift in Sources */,
 				271C348D2D7B691500B1DDE3 /* MaterialCard.swift in Sources */,
 				271C34692D7B567B00B1DDE3 /* SceneDelegate.swift in Sources */,
